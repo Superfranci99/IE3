@@ -1,0 +1,7 @@
+#Include ASCII chars for all texts
+After some debugging, it seems the code for doing that **is already inside the rom**. So there is no need to write new code but just to change two `BL <addr>`:
+020F25A4, 020F25AC => these are the two ARM instuctions to modify with: `01 00 00 BA`
+
+---
+
+At the moment I've not verified it very well, but at least now it seems it's working.
